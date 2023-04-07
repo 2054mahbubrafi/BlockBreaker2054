@@ -93,24 +93,40 @@ function movePaddle(){
     paddle.x += paddle.dx;
 
     //Surrounding wall detection
+    
+    
     //To the right side
     
+if (e.key='ArrowRight')
+ {
+    paddle.dx+=2 ;
+ }
 
     //Surrounding wall detection
-    //To the left side
-    
-}
 
+    //To the left side
+    if (e.key ='ArrowLeft')
+    {
+        paddle.dx-=2 ; 
+    }
+  
 //Function to move ball on the canvas
 function moveBall(){
     ball.x += ball.dx;
     ball.y += ball.dy;
 
     //Surrounding wall collision detection(x-axis)
+    
+   
     //right and left walls
+    if ( canvas.width<=ball.x||ball.x<0)
+    [
+        ball.dx=ball.dx*(-1)
+    ]
+
+    //Surrounding wall collision detection(y-axis) 
     
 
-    //Surrounding wall collision detection(y-axis)
     //top and bottom walls
     
 
@@ -207,6 +223,6 @@ function keyUp(e){
 document.addEventListener('keydown', keyDown);
 document.addEventListener('keyup', keyUp);
 
-
+}
 
 
