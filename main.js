@@ -120,15 +120,18 @@ function moveBall(){
    
     //right and left walls
     if ( canvas.width<=ball.x||ball.x<0)
-    [
+    {
         ball.dx=ball.dx*(-1)
-    ]
+    }
 
     //Surrounding wall collision detection(y-axis) 
     
 
     //top and bottom walls
-    
+    if (canvas.height<=ball.y||ball.y<0)
+    {
+        ball.dy=ball.dy*(-1) 
+    }
 
     //Paddle collision functionality
     
